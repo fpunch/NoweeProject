@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NoweeProject</string>
+    <string name="chat">chat</string>
+    <string name="status">status</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_text_to_the_message">Add text to the message</string>
 </resources>
