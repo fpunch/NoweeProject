@@ -74,14 +74,13 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
-            /*   if (response.getError().getErrorCode() == ErrorCodes.NO_NETWORK) {
+               if (response.getError().getErrorCode() == ErrorCodes.NO_NETWORK) {
                     Toast.makeText(this, "Sign-in failed, no network", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Log.e(TAG, "Sign-in error: ", response.getError());*/
+                Log.e(TAG, "Sign-in error: ", response.getError());
             }
         }
     }
-
 
 }

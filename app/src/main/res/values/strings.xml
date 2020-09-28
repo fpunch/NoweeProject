@@ -8,4 +8,9 @@
     <string name="nowee_login">NOWEE Login</string>
     <string name="email_address">email address</string>
     <string name="delete_account">Delete account</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="log_in">Log In</string>
+    <string name="delete">delete</string>
+    <string name="log_out">Log out</string>
 </resources>
