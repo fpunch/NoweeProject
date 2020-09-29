@@ -14,4 +14,17 @@
     <string name="delete">delete</string>
     <string name="log_out">Log out</string>
     <string name="you_re_logged_in">You\'re logged in</string>
+
+
+
+    //Jesse Strings
+    <string name = "AddButton"> Add! </string>
+    <string name = "Username"> Username </string>
+    <string name = "firstName"> First name</string>
+    <string name = "surname"> Surname </string>
+    <string name = "emailAddress"> Email Address </string>
+    <string name = "phoneNumber"> Phone Number </string>
+    <string name = "greeting"> New Contact</string>
+    <string name = "createContact"> Create </string>
+    <string name = "profileImage"> ProfileImage </string>
 </resources>

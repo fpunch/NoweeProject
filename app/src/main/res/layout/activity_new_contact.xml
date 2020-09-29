@@ -83,7 +83,7 @@
             android:id="@+id/profileImage"
             android:layout_width="146dp"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/profileimage"
+            android:contentDescription="@string/profileImage"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView

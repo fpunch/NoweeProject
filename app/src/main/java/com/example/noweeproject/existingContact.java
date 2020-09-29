@@ -23,7 +23,7 @@ public class existingContact extends AppCompatActivity {
         AddButton = (Button) findViewById(R.id.AddButton);
         UsernameField = (TextView) findViewById(R.id.Username);
 
-
+/*
         //Listener for Add Button -> send activity
         AddButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class existingContact extends AppCompatActivity {
                 myIntent.putExtra();
                 existingContact.this.startActivity(myIntent);
             }
-        });
+        });*/
     }
 
 

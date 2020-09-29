@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "979661377088",
+    "firebase_url": "https://noweeproject.firebaseio.com",
+    "project_id": "noweeproject",
+    "storage_bucket": "noweeproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979661377088:android:cb19ba5291075cd3a159a5",
+        "android_client_info": {
+          "package_name": "com.example.noweeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979661377088-di5mp9f1ioduinikfv12d8n5eag5nqeg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.noweeproject",
+            "certificate_hash": "0f91276582caea70a05d32419ba3417ae6b55d4c"
+          }
+        },
+        {
+          "client_id": "979661377088-3oco7dck1a3t41rh6ttui7493q189f19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN8lvYqkw1Kp89v4asXBnRQgRijHZmNi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979661377088-3oco7dck1a3t41rh6ttui7493q189f19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
