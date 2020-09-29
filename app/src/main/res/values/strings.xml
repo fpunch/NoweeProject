@@ -5,18 +5,4 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_text_to_the_message">Add text to the message</string>
-
-
-    <!-- Existing Contact Strings -->
-    <string name="AddButton"> Add! </string>
-    <string name="Username"> Username </string>
-
-    <!-- New Contact Strings -->
-    <string name="firstName"> First Name </string>
-    <string name="surname"> Surname </string>
-    <string name="emailAddress"> Email Address </string>
-    <string name="phoneNumber"> Phone Number </string>
-    <string name="greeting">New Contact </string>
-    <string name="createContact"> Create </string>
-    <string name="profileimage">ProfileImage</string>
 </resources>
