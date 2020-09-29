@@ -8,6 +8,7 @@ public class News {
     public String friends;
     public String news;
 
+    
 
 
 
