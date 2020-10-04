@@ -6,22 +6,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-
-
 public class MainActivity extends AppCompatActivity {
-//testing 123xyz ddd2
     private String TAG = "loginActivity";
     private FirebaseAuth auth;
-    private Button logoutButton, deleteButton;
+    private Button logoutButton, deleteButton, statusButton, chatButton, homeButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         logoutButton = (Button) findViewById(R.id.logoutBtn);
         deleteButton = (Button) findViewById(R.id.deleteBtn);
+        statusButton = (Button) findViewById(R.id.statusBtn);
+        chatButton = (Button) findViewById(R.id.chatBtn);
+        homeButton = (Button) findViewById(R.id.homeBtn);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +53,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        statusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              // statusGo();
+                startActivity(new Intent(MainActivity.this, Status.class));
+            }
+        });
+
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, News.class));
+            }
+        });
+
+        chatButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                 //   chat();
+                }
+        });
+
+
+    }
+
+    private void statusGo() {
+            Intent intent = new Intent(this, Status.class);
+            startActivity(intent);
+            finish();
     }
 
     private void checkIfLoggedIn() {
@@ -83,4 +117,36 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return true;
+    }
+
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId())
+        {
+            case R.id.logoutBtn:
+                logout();
+                return true;
+
+            case R.id.deleteBtn:
+                deleteAccount();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+/*
+    public void status() {
+        startActivity(new Intent(MainActivity.this, Status.class));
+        finish();//FORCING CRASH
+
+    }*/
+
 }

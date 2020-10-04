@@ -27,4 +27,6 @@
     <string name = "greeting"> New Contact</string>
     <string name = "createContact"> Create </string>
     <string name = "profileImage"> ProfileImage </string>
+    <string name="crash">crash</string>
+    <string name="home">Home</string>
 </resources>

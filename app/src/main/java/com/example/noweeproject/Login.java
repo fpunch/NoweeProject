@@ -29,11 +29,6 @@ public class Login extends AppCompatActivity {
     private FirebaseAuth auth;
     private static final int RC_SIGN_IN = 123;
 
-    //Ask about step 3 and it requires(?) do i restructure login to package only, do i just grab default
-    //also ask team what is the home button for... what is home?
-    //ask about exam prep
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
