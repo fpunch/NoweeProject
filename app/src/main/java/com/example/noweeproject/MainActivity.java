@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         statusButton = (Button) findViewById(R.id.statusBtn);
         chatButton = (Button) findViewById(R.id.chatBtn);
         homeButton = (Button) findViewById(R.id.homeBtn);
-
+/*
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 deleteAccount();
             }
-        });
+        });*/
 
         statusButton.setOnClickListener(new View.OnClickListener() {
             @Override
