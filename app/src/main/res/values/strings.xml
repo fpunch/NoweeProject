@@ -30,4 +30,6 @@
     <string name="nowee_group_image">Nowee Group Image</string>
     <string name="username"> </string>
     <string name="groupAddDesc">groupAddDesc</string>
+    <string name="crash">crash</string>
+    <string name="home">Home</string>
 </resources>

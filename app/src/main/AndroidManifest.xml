@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.noweeproject">
+    package="com.example.noweeproject">
 
-<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-<application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="NoweeProject"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
-    <activity android:name=".Login"></activity>
-    <activity android:name=".MainActivity">
-
-    </activity>
-    <activity android:name=".existingContact">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="NoweeProject"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Login"></activity>
+        <activity android:name=".MainActivity"></activity>
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+        <activity android:name=".Status"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".News"
+            android:parentActivityName=".MainActivity">
+        </activity>
 
-    </activity>
-    <activity android:name=".newContact">
-
-    </activity>
-
+    <activity android:name=".newContact"></activity>
+        <activity android:name=".existingContact"></activity>
 </application>
 </manifest>
