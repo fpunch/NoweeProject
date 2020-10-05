@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A0F4"
+    android:background="@color/NoweeColour2"
     tools:context=".newContact">
 
     <Button
@@ -79,8 +79,8 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorAccent"
+        android:layout_height="134dp"
+        android:background="@color/NoweeColour"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,9 +103,9 @@
             android:id="@+id/Greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="70dp"
-            android:text="@string/usernameText"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/newContactText"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="30sp"

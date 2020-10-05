@@ -14,6 +14,8 @@
     <string name="delete">delete</string>
     <string name="log_out">Log out</string>
     <string name="you_re_logged_in">You\'re logged in</string>
+    <string name="crash">crash</string>
+    <string name="home">Home</string>
 
 
     //Jesse Strings
@@ -23,12 +25,15 @@
     <string name="lastName"> Surname </string>
     <string name="emailAddress"> Email Address </string>
     <string name="phoneNumber"> Phone Number </string>
-    <string name="newContactText"> New Contact</string>
+    <string name="newContactText">New Contact</string>
     <string name="createContactBtn"> Create </string>
     <string name="profileImage"> ProfileImage </string>
     <string name="nowee_group_image">Nowee Group Image</string>
     <string name="username"> </string>
     <string name="groupAddDesc">groupAddDesc</string>
-    <string name="crash">crash</string>
-    <string name="home">Home</string>
+    <string name="existContactBtn"></string>
+    <string name="addNewContactBtn"></string>
+    <string name="chatText">chat</string>
+    <string name="checkText">check</string>
+    <string name="new_contactText">New Contact</string>
 </resources>

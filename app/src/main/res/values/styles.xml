@@ -2,9 +2,15 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <!-- This code is for changing the color of the bar. -->
+        <!-- Type your colour code which you want to set in colorPrimary item -->
+        <item name="colorPrimary">@color/NoweeColour2</item>
+        <item name="colorPrimaryDark">@color/NoweeColour2</item>
+        <item name="colorAccent">@color/NoweeColour</item>
     </style>
+
+    <!-- Define other styles to fix theme -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
