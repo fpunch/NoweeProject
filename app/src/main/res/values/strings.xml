@@ -16,6 +16,7 @@
     <string name="you_re_logged_in">You\'re logged in</string>
     <string name="crash">crash</string>
     <string name="home">Home</string>
+    <string name="Status">Status</string>
 
 
     //Jesse Strings
@@ -36,4 +37,6 @@
     <string name="chatText">chat</string>
     <string name="checkText">check</string>
     <string name="new_contactText">New Contact</string>
+    <string name="what_are_you_doing_now">what are you doing now?</string>
+
 </resources>
