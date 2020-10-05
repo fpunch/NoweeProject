@@ -26,7 +26,7 @@ public class Status extends AppCompatActivity {
     static final int SEND_MESSAGE = 3; // STATUS VALUE
     static final int SMS_PERMISSION_REQ = 123; // PERMISSIONS VALUE
 
-    //STATUS page(profile picture, message, send your message
+    //STATUS page(profile picture, message, send your messages
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
