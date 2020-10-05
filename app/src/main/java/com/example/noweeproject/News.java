@@ -35,7 +35,7 @@ public class News extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //what to put???
+                //what to put????
 
             }
         });
