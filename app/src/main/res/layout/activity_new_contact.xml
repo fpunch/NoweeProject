@@ -4,11 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#03A0F4"
     tools:context=".newContact">
+
+    <Button
+        android:id="@+id/addContactBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="224dp"
+        android:onClick="btnAdd_Contact_onClick"
+        android:text="@string/createContactBtn"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,52 +46,43 @@
             android:hint="@string/firstName"
             android:inputType="textPersonName" />
 
+
         <EditText
             android:id="@+id/editSurname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/surname"
+            android:hint="@string/lastName"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editEmail"
-            android:hint="@string/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
+            android:hint="@string/emailAddress"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/editPhone"
-            android:hint="@string/phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
+            android:hint="@string/phoneNumber"
             android:inputType="phone" />
 
-        <Button
-            android:id="@+id/addContactBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="100dp"
-            android:hint="@string/AddButton"
-            android:text="@string/createContact"
-            android:textSize="24sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/colorAccent"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,22 +91,26 @@
 
         <ImageView
             android:id="@+id/profileImage"
-            android:layout_width="146dp"
-            android:layout_height="wrap_content"
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
             android:contentDescription="@string/profileImage"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:focusable="true"
+            app:srcCompat="@drawable/single"
+            tools:srcCompat="@drawable/single" />
 
         <TextView
             android:id="@+id/Greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
-            android:text="@string/greeting"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/usernameText"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 public class newContact extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,7 @@ public class newContact extends AppCompatActivity {
     }
 
     //Add Contact Method
-    protected void btnAdd_Contact_OnClick(View view) {
+    public void btnAdd_Contact_onClick(View view) {
         Intent intent = new Intent (ContactsContract.Intents.Insert.ACTION);
         intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
@@ -29,12 +30,15 @@ public class newContact extends AppCompatActivity {
         EditText mPhoneNumber = (EditText) findViewById(R.id.editPhone);
 
         //Insert an email address
-        intent.putExtra(ContactsContract.Intents.Insert.EMAIL, mEmail.getText())
+        intent
+                .putExtra(ContactsContract.Intents.Insert.EMAIL, mEmail.getText())
                 .putExtra(ContactsContract.Intents.Insert.EMAIL_TYPE,ContactsContract.CommonDataKinds.Email.TYPE_WORK)
                 .putExtra(ContactsContract.Intents.Insert.PHONE, mPhoneNumber.getText())
                 .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_WORK)
-                .putExtra(ContactsContract.Intents.Insert.NAME,"Test");
+                .putExtra(ContactsContract.Intents.Insert.NAME, mFirstName.getText() + " " + mLastName.getText())
+                ;
 
         startActivity(intent);
+
     }
 }
