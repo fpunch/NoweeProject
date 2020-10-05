@@ -18,13 +18,16 @@
 
 
     //Jesse Strings
-    <string name = "AddButton"> Add! </string>
-    <string name = "Username"> Username </string>
-    <string name = "firstName"> First name</string>
-    <string name = "surname"> Surname </string>
+    <string name = "addExistButton"> Add </string>
+    <string name = "usernameText"> Nowee Username </string>
+    <string name = "firstName"> First Name</string>
+    <string name = "lastName"> Surname </string>
     <string name = "emailAddress"> Email Address </string>
     <string name = "phoneNumber"> Phone Number </string>
-    <string name = "greeting"> New Contact</string>
-    <string name = "createContact"> Create </string>
+    <string name = "newContactText"> New Contact</string>
+    <string name = "createContactBtn"> Create </string>
     <string name = "profileImage"> ProfileImage </string>
+    <string name="nowee_group_image">Nowee Group Image</string>
+    <string name="username"> </string>
+    <string name="groupAddDesc">groupAddDesc</string>
 </resources>

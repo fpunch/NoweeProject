@@ -6,12 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class existingContact extends AppCompatActivity {
 
-    Button AddButton = null;
     TextView UsernameField = null;
 
     @Override
@@ -19,23 +18,15 @@ public class existingContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_existing_contact);
 
-        //Initialise UI Objects
-        AddButton = (Button) findViewById(R.id.AddButton);
-        UsernameField = (TextView) findViewById(R.id.Username);
 
-/*
-        //Listener for Add Button -> send activity
-        AddButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                Intent myIntent = new Intent(existingContact.this, SendActivity.class);
-                myIntent.putExtra();
-                existingContact.this.startActivity(myIntent);
-            }
-        });*/
     }
+    public void btnExist_Contact_onClick(View view) {
+        Intent intent = new Intent (ContactsContract.Intents.Insert.ACTION);
+        intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+
+        EditText mUsername = (EditText) findViewById(R.id.usernameField);
 
 
 
-}
+        }
+    }
