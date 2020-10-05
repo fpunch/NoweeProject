@@ -24,13 +24,7 @@
         android:id="@+id/crashButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="175dp"
-        android:text="@string/crash"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="148dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

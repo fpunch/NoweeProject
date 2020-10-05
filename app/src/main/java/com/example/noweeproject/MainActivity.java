@@ -10,9 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -38,21 +36,8 @@ public class MainActivity extends AppCompatActivity {
         statusButton = (Button) findViewById(R.id.statusBtn);
         chatButton = (Button) findViewById(R.id.chatBtn);
         homeButton = (Button) findViewById(R.id.homeBtn);
-/*
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-            }
-        });
 
-        deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                deleteAccount();
-            }
-        });*/
-
+        //Status Intent
         statusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Status.class));
             }
         });
-
+        //Nowee News Intent
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,20 +53,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Contact Picker Intent
         chatButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                 //   chat();
+                 //   Contact Picker
+                    startActivity(new Intent(MainActivity.this, ContactActivity.class));
                 }
         });
-
-
-    }
-
-    private void statusGo() {
-            Intent intent = new Intent(this, Status.class);
-            startActivity(intent);
-            finish();
     }
 
     private void checkIfLoggedIn() {
@@ -141,12 +120,5 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-/*
-    public void status() {
-        startActivity(new Intent(MainActivity.this, Status.class));
-        finish();//FORCING CRASH
-
-    }*/
 
 }

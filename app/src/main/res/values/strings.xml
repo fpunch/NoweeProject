@@ -16,17 +16,16 @@
     <string name="you_re_logged_in">You\'re logged in</string>
 
 
-
     //Jesse Strings
-    <string name = "addExistButton"> Add </string>
-    <string name = "usernameText"> Nowee Username </string>
-    <string name = "firstName"> First Name</string>
-    <string name = "lastName"> Surname </string>
-    <string name = "emailAddress"> Email Address </string>
-    <string name = "phoneNumber"> Phone Number </string>
-    <string name = "newContactText"> New Contact</string>
-    <string name = "createContactBtn"> Create </string>
-    <string name = "profileImage"> ProfileImage </string>
+    <string name="addExistButton"> Add </string>
+    <string name="usernameText"> Nowee Username </string>
+    <string name="firstName"> First Name</string>
+    <string name="lastName"> Surname </string>
+    <string name="emailAddress"> Email Address </string>
+    <string name="phoneNumber"> Phone Number </string>
+    <string name="newContactText"> New Contact</string>
+    <string name="createContactBtn"> Create </string>
+    <string name="profileImage"> ProfileImage </string>
     <string name="nowee_group_image">Nowee Group Image</string>
     <string name="username"> </string>
     <string name="groupAddDesc">groupAddDesc</string>
