@@ -40,7 +40,7 @@ public class ContactActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
             chatbth=findViewById(R.id.chatB);
             checkbtn=findViewById(R.id.check);
-            addbth=findViewById(R.id.addingcontact);
+            addbth=findViewById(R.id.addNewContact);
             chatbth.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
