@@ -20,7 +20,7 @@ public class Status extends AppCompatActivity {
     private EditText msgText = null;
 
     private String contact = null;
-    private String currentStatus = null;
+    private String currentStatus;
 
 
     static final int SEND_MESSAGE = 3; // STATUS VALUE
@@ -33,10 +33,25 @@ public class Status extends AppCompatActivity {
         setContentView(R.layout.status_list);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
 
+    public Status(String currentStatus) {
+        currentStatus = currentStatus;
+        this.currentStatus = currentStatus;
+    }
 
+    public Status() {}
+
+    public String getStatus(){return currentStatus;}
+
+    public void setStatus(String currentStatus){ currentStatus = currentStatus;}
+
+    @Override
+    public String toString(){
+        return currentStatus;
 
     }
+
 
 
 
