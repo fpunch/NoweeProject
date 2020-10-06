@@ -39,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@color/NoweeColour"
                 android:text="@string/status" />
 
             <Button
@@ -46,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@color/NoweeColour2"
                 android:text="@string/home" />
 
             <Button
@@ -53,6 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="@color/NoweeColour"
                 android:text="@string/chat" />
 
         </LinearLayout>

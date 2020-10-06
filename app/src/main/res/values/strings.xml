@@ -4,7 +4,7 @@
     <string name="status">status</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="add_text_to_the_message">Add text to the message</string>
+    <string name="add_text_to_the_message">Type a message...</string>
     <string name="nowee_login">NOWEE Login</string>
     <string name="email_address">email address</string>
     <string name="delete_account">Delete account</string>
@@ -16,27 +16,26 @@
     <string name="you_re_logged_in">You\'re logged in</string>
     <string name="crash">crash</string>
     <string name="home">Home</string>
-    <string name="Status">Status</string>
-    <string name="what_are_you_doing_now">what are you doing now?</string>
+    <string name="noweeStatusText">Nowee Status</string>
+
 
     //Jesse Strings
-    <string name="addExistButton"> Add </string>
-    <string name="usernameText"> Nowee Username </string>
-    <string name="firstName"> First Name</string>
-    <string name="lastName"> Surname </string>
-    <string name="emailAddress"> Email Address </string>
-    <string name="phoneNumber"> Phone Number </string>
+    <string name="addExistButton">Add</string>
+    <string name="usernameText">Nowee Username</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Surname</string>
+    <string name="emailAddress">Email Address</string>
+    <string name="phoneNumber"> Phone Number</string>
     <string name="newContactText">New Contact</string>
-    <string name="createContactBtn"> Create </string>
-    <string name="profileImage"> ProfileImage </string>
+    <string name="createContactBtn">Create</string>
+    <string name="profileImage">ProfileImage</string>
     <string name="nowee_group_image">Nowee Group Image</string>
     <string name="username"> </string>
     <string name="groupAddDesc">groupAddDesc</string>
     <string name="existContactBtn"></string>
     <string name="addNewContactBtn"></string>
     <string name="chatText">chat</string>
-    <string name="checkText">check</string>
+    <string name="checkText">Existing Contact</string>
     <string name="new_contactText">New Contact</string>
-
-
+    <string name="statusSendBtn">Send</string>
 </resources>
