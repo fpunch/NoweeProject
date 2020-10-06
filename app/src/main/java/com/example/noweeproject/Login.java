@@ -18,15 +18,25 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.Arrays;
 import java.util.concurrent.Executor;
 
+//import models.User;
+
 public class Login extends AppCompatActivity {
 
     private static final String TAG = "loginActivity";
     private FirebaseAuth auth;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference myRef;
+    private FirebaseAuth.AuthStateListener mAuthListener;
     private static final int RC_SIGN_IN = 123;
 
     @Override
@@ -77,5 +87,61 @@ public class Login extends AppCompatActivity {
             }
         }
     }
+
+    /*WORK IN PROGRESS JESSE M
+    private void setupFirebaseAuth() {
+        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth.");
+
+        auth = FirebaseAuth.getInstance();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        myRef = mFirebaseDatabase.getReference();
+
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                if (user != null) {
+                    Log.d(TAG, "onAuthStateChanged:signed_in" + user.getUid());
+
+                    myRef.addListenerForSingleValueEvent((new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            //1st check
+                            //if(checkIfUsernameExists(username, datasnapshot))
+                            //Add new user to database
+
+                            //add new user account settings to database
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    }));
+                } else {
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
+            }
+        };
+        }
+        //WORK IN PROGRESS JESSE
+        public boolean checkIfUsernameExists(String username, DataSnapshot dataSnapshot) {
+        Log.d(TAG, "checkIfUsernameExists: checking if "  + username +"already exists");
+
+        User user = new User();
+
+        for (DataSnapshot ds: dataSnapshot.getChildren()){
+            Log.d(TAG, "checkIfUsernameExists: datasnapshot: " + ds);
+
+            user.setUsername(ds.getValue(User.class).getUsername());
+            Log.d(TAG, "checkIfUsernameExists: username: "+ user.getUsername());
+
+            if(user.getUsername().equals(username)) {
+                Log.d(TAG, "checkIfUsernameExistss: FOUND A MATCH: " + user.getUsername());
+            }
+        }
+        return true;
+    }*/
 
 }
