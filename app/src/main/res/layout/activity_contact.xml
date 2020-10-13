@@ -30,14 +30,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/NoweeColour"
-            android:text="@string/new_contactText" />
+             />
 
         <Button
             android:id="@+id/check"
             android:layout_width="118dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/checkText" />
+             />
 
         <Button
             android:id="@+id/chatB"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/NoweeColour"
-            android:text="@string/chatText" />
+            />
 
     </LinearLayout>
 
