@@ -37,7 +37,6 @@ public class newContact extends AppCompatActivity {
                 .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_WORK)
                 .putExtra(ContactsContract.Intents.Insert.NAME, mFirstName.getText() + " " + mLastName.getText())
                 ;
-
         startActivity(intent);
 
     }

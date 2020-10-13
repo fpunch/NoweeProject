@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     private String TAG = "loginActivity";
     private FirebaseAuth auth;
-    private Button logoutButton, deleteButton, statusButton, chatButton, homeButton;
+    private Button logoutButton, deleteButton, statusButton, chatButton, newsButton;
 
 
     @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         deleteButton = (Button) findViewById(R.id.deleteBtn);
         statusButton = (Button) findViewById(R.id.statusBtn);
         chatButton = (Button) findViewById(R.id.chatBtn);
-        homeButton = (Button) findViewById(R.id.homeBtn);
+        newsButton = (Button) findViewById(R.id.newsBtn);
 
         //Status Intent
         statusButton.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Nowee News Intent
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        newsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, News.class));

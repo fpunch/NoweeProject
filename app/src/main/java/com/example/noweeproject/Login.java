@@ -34,10 +34,12 @@ public class Login extends AppCompatActivity {
 
     private static final String TAG = "loginActivity";
     private FirebaseAuth auth;
-    private FirebaseDatabase mFirebaseDatabase;
-    private DatabaseReference myRef;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private static final int RC_SIGN_IN = 123;
+    private String append;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference myRef;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,40 +90,46 @@ public class Login extends AppCompatActivity {
         }
     }
 
+
+
+
+
     /*WORK IN PROGRESS JESSE M
     private void setupFirebaseAuth() {
-        Log.d(TAG, "setupFirebaseAuth: setting up firebase auth.");
+                    Log.d(TAG, "setupFirebaseAuth: setting up firebase auth.");
 
-        auth = FirebaseAuth.getInstance();
-        mFirebaseDatabase = FirebaseDatabase.getInstance();
-        myRef = mFirebaseDatabase.getReference();
+                    auth = FirebaseAuth.getInstance();
+                    mFirebaseDatabase = FirebaseDatabase.getInstance();
+                    myRef = mFirebaseDatabase.getReference();
 
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
+                    mAuthListener = new FirebaseAuth.AuthStateListener() {
 
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
+                        public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                if (user != null) {
-                    Log.d(TAG, "onAuthStateChanged:signed_in" + user.getUid());
+                            if (user != null) {
+                                Log.d(TAG, "onAuthStateChanged:signed_in" + user.getUid());
 
-                    myRef.addListenerForSingleValueEvent((new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            //1st check
-                            //if(checkIfUsernameExists(username, datasnapshot))
-                            //Add new user to database
+                                myRef.addListenerForSingleValueEvent((new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        //1st check
+                                        if(checkIfUsernameExists(username, dataSnapshot) {
 
-                            //add new user account settings to database
-                        }
+                                        }
+                                        //Add new user to database
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
+                                        //add new user account settings to database
+                                    }
 
-                        }
-                    }));
-                } else {
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
-                }
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                }));
+                            } else {
+                                Log.d(TAG, "onAuthStateChanged:signed_out");
+                            }
             }
         };
         }
@@ -138,7 +146,7 @@ public class Login extends AppCompatActivity {
             Log.d(TAG, "checkIfUsernameExists: username: "+ user.getUsername());
 
             if(user.getUsername().equals(username)) {
-                Log.d(TAG, "checkIfUsernameExistss: FOUND A MATCH: " + user.getUsername());
+                Log.d(TAG, "checkIfUsernameExists: FOUND A MATCH: " + user.getUsername());
             }
         }
         return true;

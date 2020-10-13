@@ -2,23 +2,20 @@ package com.example.noweeproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.noweeproject.ContactPciker.Contact;
 
 public class News extends AppCompatActivity {
     RecyclerView recyclerView;
  //   private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
-    private Button statusButton, chatButton, homeButton;
+    private Button statusButton, chatButton;
     public String friends;
     public String news;
 
@@ -32,7 +29,7 @@ public class News extends AppCompatActivity {
         Intent intent = getIntent();
 
         statusButton = (Button) findViewById(R.id.statusBtn);
-        homeButton = (Button) findViewById(R.id.homeBtn);
+        chatButton = (Button) findViewById(R.id.chatBtn);
 
         statusButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,21 +39,14 @@ public class News extends AppCompatActivity {
             }
         });
 
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        chatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //what to put????
+                startActivity(new Intent(News.this, ContactActivity.class));
 
             }
         });
 
         }
-
-    private void setUpRecyclerView(){
-        }
-
-
-
-
 
 }

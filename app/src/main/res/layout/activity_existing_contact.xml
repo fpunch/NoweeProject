@@ -65,6 +65,7 @@
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center_horizontal"
+            android:backgroundTint="@color/NoweeColour"
             android:onClick="btnExist_Contact_onClick"
             android:text="@string/addExistButton" />
 

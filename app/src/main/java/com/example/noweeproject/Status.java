@@ -21,6 +21,8 @@ public class Status extends AppCompatActivity {
 
     private String contact = null;
     private String currentStatus;
+    private Button newsButton;
+    private Button chatButton;
 
 
     static final int SEND_MESSAGE = 3; // STATUS VALUE
@@ -31,28 +33,40 @@ public class Status extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.status_list);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Intent intent = getIntent();
+        newsButton = (Button) findViewById(R.id.newsBtn2);
+        chatButton = (Button) findViewById(R.id.chatBtn);
+
+        //Contact Picker Intent
+        chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Status.this, ContactActivity.class));
+            }
+        });
+
+        //Nowee News Intent
+        newsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Status.this, News.class));
+            }
+        });
     }
 
+    public Status() {
+
+    }
     public Status(String currentStatus) {
         currentStatus = currentStatus;
         this.currentStatus = currentStatus;
     }
 
-    public Status() {}
-
     public String getStatus(){return currentStatus;}
 
     public void setStatus(String currentStatus){ currentStatus = currentStatus;}
-
-    @Override
-    public String toString(){
-        return currentStatus;
-
-    }
-
-
-
 
 }
