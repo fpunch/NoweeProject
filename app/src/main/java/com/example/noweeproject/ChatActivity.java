@@ -56,9 +56,12 @@ public class ChatActivity extends AppCompatActivity {
                 Log.d("TEST", contact_number);
                 numView.setText(contact_number);
                 cursor.close();
+            }else {
+                Toast.makeText(this, "please select contact number!", Toast.LENGTH_SHORT).show();
+            }
             }
         }
-    }
+
 
     private void checkForSmsPermission() {
         if (ActivityCompat.checkSelfPermission(this,
@@ -102,16 +105,20 @@ public class ChatActivity extends AppCompatActivity {
 
         String smsMessage = smsEditText.getText().toString();
 
-        String scAddress = null;
+        String scA = null;
 
-        PendingIntent sentIntent = null, deliveryIntent = null;
-
+        PendingIntent sentI = null, deliI = null;
+        if (smsEditText==null || contact_number==null ){
+            Toast.makeText(this, "please fill all field   ", Toast.LENGTH_SHORT).show();
+        }
+        else {
         checkForSmsPermission();
         SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(contact_number, scAddress, smsMessage,
-                sentIntent, deliveryIntent);
+        smsManager.sendTextMessage(contact_number, scA, smsMessage,
+                sentI, deliI);
         Toast.makeText(this, "message sent!", Toast.LENGTH_SHORT).show();
-    }
+        }
+        }
 
 
     private void disableSmsButton() {
@@ -120,7 +127,15 @@ public class ChatActivity extends AppCompatActivity {
         Button smsButton = (Button) findViewById(R.id.message_icon);
         smsButton.setVisibility(View.INVISIBLE);
         Button retryButton = (Button) findViewById(R.id.button_retry);
+        retryButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                startActivity(new Intent(ChatActivity.this, ChatActivity.class));
+            }
+        });
         retryButton.setVisibility(View.VISIBLE);
+            Button selectButton = findViewById(R.id.selectContactBtn);
+            selectButton.setVisibility(View.INVISIBLE);
     }
 
     private void enableSmsButton() {
