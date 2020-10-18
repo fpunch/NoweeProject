@@ -54,4 +54,5 @@
     <string name="granted_permission">Permission Granted</string>
     <string name="select_phone">Select phone number</string>
     <string name="nowee_chat">Nowee Chat</string>
+    <string name="message">message</string>
 </resources>
